@@ -24,7 +24,7 @@
           };
 
         in {
-          gf = pkgs.haskell.lib.overrideCabal
+          default = pkgs.haskell.lib.overrideCabal
             (haskellPackages.callCabal2nixWithOptions "gf" self "--flag=-server"
               { }) (_old: {
                 # Fix utf8 encoding problems
